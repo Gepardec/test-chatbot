@@ -1,0 +1,13 @@
+<style>
+  .assistant .mat-mdc-card-content{
+    background-color: #eee;
+  }
+</style>
+<div class="chat-display">
+  <div *ngFor="let message of messages" [class]="message.type">
+    <mat-card style="margin-bottom: 5px;">
+      <mat-card-content [innerText]="message.content"></mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<style>
+  .invisible {
+    display: none;
+  }
+  .disabled {
+    display: none;
+  }
+</style>
+<div class="chat-input" style="position: relative; margin-top: 20px;">
+    <mat-form-field class="example-full-width" style="width: 100%;">
+      <mat-label>Type your message...</mat-label>
+      <textarea style="width: 100%;" matInput placeholder="Message" [(ngModel)]="userMessage" cdkTextareaAutosize
+                #autosize="cdkTextareaAutosize"
+                #textareaRef
+                cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="10"
+                [class.disabled]="progress"
+                (keydown)="onKeydown($event)"></textarea>
+    </mat-form-field>
+  <button style="float: right;" mat-raised-button color="primary" (click)="sendMessage()" [class.invisible]="progress">Send</button>
+  <mat-progress-spinner style="float: right; width: 30px; margin-top: -30px;" [class.invisible]="!progress" mode="indeterminate" />
+</div>
+
+
