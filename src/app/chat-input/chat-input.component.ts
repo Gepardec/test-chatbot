@@ -33,9 +33,7 @@ export class ChatInputComponent implements OnInit {
     }
     this.progress = true;
     this.newMessage.emit(this.userMessage);
-    this.chat.addUserMessage(this.userMessage);
-    await delay(2000);
-    this.chat.dialog.messages.push(new Message('assistant', "aha"));
+    await this.chat.say(this.userMessage);
     this.userMessage = '';
     this.progress = false;
     console.log(this.textareaElement)

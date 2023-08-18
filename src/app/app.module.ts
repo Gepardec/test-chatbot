@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {Component} from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -20,17 +21,18 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     ChatDisplayComponent,
     ChatInputComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatSlideToggleModule,
-        MatButtonModule,
-        MatInputModule,
-        MatProgressSpinnerModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
